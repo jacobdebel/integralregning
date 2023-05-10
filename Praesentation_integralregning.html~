@@ -1,0 +1,1931 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="utf-8"/>
+<title>Integralregning for eksperter</title>
+<meta name="author" content="Vibenshus Gymnasium"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="/home/jde/git-repos/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="/home/jde/git-repos/reveal.js/dist/theme/sky.css" id="theme"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide" data-background="">
+<h2>Integralregning for eksperter</h2><h3>Matematik A</h3><h4>Vibenshus Gymnasium</h4><h4></h4>
+</section>
+
+
+<section>
+<section id="slide-orgcfd4758">
+<h2 id="orgcfd4758">Viggo Brun (1885 - 1978)</h2>
+<blockquote>
+<p class="verse">
+Derivasjon er et håndverk,<br />
+integrasjon er en kunst!"<br />
+</p>
+</blockquote>
+
+
+</section>
+</section>
+<section>
+<section id="slide-org38a3318">
+<h2 id="org38a3318">Brush-up</h2>
+<p>
+Hvis jeg påstår, at integralregning kan inddeles i to dele. Hvilke dele tænker I så på?
+</p>
+<ul>
+<li class="fragment appear">Ubestemte integraler?</li>
+<li class="fragment appear">Bestemte integraler?</li>
+
+</ul>
+</section>
+<section id="slide-org7e58151">
+<h3 id="org7e58151">Ubestemte integraler</h3>
+<p>
+Hvad tænker I på, når I hører dette?
+</p>
+<ul>
+<li class="fragment appear">Det modsatte af at differentiere?</li>
+<li class="fragment appear">Bestemmelse af stamfunktioner?</li>
+<li class="fragment appear">Integrationskonstanter?</li>
+<li class="fragment appear">Bestemmelse af stamfunktioner gennem specifikke punkter?</li>
+
+</ul>
+
+</section>
+<section id="slide-org10f228a">
+<h3 id="org10f228a">Bestemte integraler</h3>
+<p>
+Hvad tænker I på, når I hører dette?
+</p>
+<ul>
+<li class="fragment appear">Bestemmelse af arealer under kurver?</li>
+<li class="fragment appear">Øvre og nedre grænser?</li>
+<li class="fragment appear">Ingen integrationskonstanter?</li>
+<li class="fragment appear">Omdrejningslegemer?</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga17c488">
+<h2 id="orga17c488">Hvordan er integralregning opstået?</h2>
+<ul>
+<li class="fragment appear">Læs <a href="https://matbhtx.systime.dk/?id=p1497">Over- og undersummer i matbhtx.systime.dk</a> og få et af mange svar.</li>
+<li class="fragment appear">I vil også lige få genopfrisket brugen af sumtegnet, \(\sum\).</li>
+
+</ul>
+
+</section>
+<section>
+<p>
+Er der mere historie forbundet med integralregning (og differentialregning)?
+</p>
+<p class="fragment (appear)">
+Sure there is!!
+</p>
+
+</section>
+<section id="slide-org96ee79d">
+<h3 id="org96ee79d">Infinitesimalregningens historie</h3>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/6wb60tcilMQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+Link: <a href="https://youtu.be/6wb60tcilMQ">https://youtu.be/6wb60tcilMQ</a>
+</p>
+
+</section>
+<section>
+<p>
+Vi vil gerne have mere historie!
+</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/9UKGPOwR-iw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+Link: <a href="https://youtu.be/9UKGPOwR-iw">https://youtu.be/9UKGPOwR-iw</a>
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orgf60da1f">
+<h2 id="orgf60da1f">Infinitesimalregningens fundamentalsætning</h2>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+Antag at \(f \, : \, [a,b] \to \mathbb{R}\) er kontinuert. Da er \(f\) integrerbar i ethvert interval \([a,x]\), når \(a\leq x \leq b\). Funktionen 
+</p>
+
+<p>
+\[F(x) = \int_a^x \, f(t) \, dt\] 
+er differentiabel, og \(F'(x) = f(x)\).
+</p>
+</blockquote>
+
+</section>
+<section>
+<blockquote>
+<p>
+Korollar:
+\[\int_a^b f(t) \,dt = F(b) - F(a)\]
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org8b2ba49">
+<h3 id="org8b2ba49">Et bevis</h3>
+<p>
+Lad os gøre det stille og roligt i hånden.
+</p>
+
+</section>
+<section id="slide-orgb1de485">
+<h3 id="orgb1de485">Her er mine håndskrevne noter</h3>
+<div class="column" style="float:left; width: 50%">
+
+<div class="figure">
+<p><img src="img/2020-12-13_16-44-13_screenshot.png" alt="2020-12-13_16-44-13_screenshot.png" width="400px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div class="figure">
+<p><img src="img/2020-12-13_16-44-32_screenshot.png" alt="2020-12-13_16-44-32_screenshot.png" width="400px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+<p>
+Se ca. det samme bevis her (nogle af symbolerne hedder noget andet)
+</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/mhb0epc6aFk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+Link: <a href="https://youtu.be/mhb0epc6aFk">https://youtu.be/mhb0epc6aFk</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-orgbec8561">
+<h2 id="orgbec8561">Stamfunktioner/antiafledte</h2>
+<ul>
+<li class="fragment appear">Stamfunktioner er antiafledte funktioner.</li>
+<li class="fragment appear">Der bruges STORE bogstaver for at angive stamfunktioner.</li>
+<li class="fragment appear">Man kan tjekke om en stamfunktion er sand ved at differentiere og tjekke, om svaret giver den oprindelige funktion.</li>
+<li class="fragment appear">Altså tjekke at \(F'(x) = f(x)\).</li>
+<li class="fragment appear">Dette kaldes <i>integrationsprøven</i>.</li>
+
+</ul>
+
+</section>
+<section id="slide-org1b15e24">
+<h3 id="org1b15e24">Eksempel 1</h3>
+<p>
+Vi skal tjekke om følgende udsagn er korrekt:
+</p>
+
+<p>
+\[\int 3 \cdot x \,dx \overset{?}{=} \frac{3}{2}x^2 + k\]
+</p>
+
+<p class="fragment (appear)">
+Højre side <i>differentieres</i>
+</p>
+<p class="fragment (appear)">
+\[\frac{d}{dx} \left( \frac{3}{2}x^2 + k \right) = \frac{3}{2} \cdot 2 x^1 = 3 x\]
+</p>
+<p class="fragment (appear)">
+Dette er lige <i>integranden</i> på venstre side, så udsagnet er korrekt.
+</p>
+
+</section>
+<section id="slide-orgf717b05">
+<h3 id="orgf717b05">Eksempel 2</h3>
+<p>
+Vi tjekker følgende udsagn:
+</p>
+
+<p>
+\[\int  \frac{1}{x^2}\,dx \overset{?}{=} \frac{1}{x^3} + k\]
+</p>
+
+<p class="fragment (appear)">
+\[\frac{d}{dx} \left( \frac{1}{x^3} + k \right) = \frac{d}{dx} \left( x^{-3} \right) = -3 x^{-4} = \frac{-3}{x^4}\]
+</p>
+
+<p class="fragment (appear)">
+Udtrykket er altså <b>ikke</b> sandt.
+</p>
+
+</section>
+<section id="slide-org0aab851">
+<h3 id="org0aab851">Opgave</h3>
+<div style="font-size: 60%;">
+<p>
+Undersøg vha. integrationsprøven, hvilke af følgende udsagn, der er sande:
+</p>
+
+<ol>
+<li>\(\int 3 \,dx \overset{?}{=} 3x+k\)</li>
+<li>\(\int x^2 \,dx \overset{?}{=} \frac{1}{2}x^3+k\)</li>
+<li>\(\int \frac{1}{x^2} \,dx \overset{?}{=} \frac{1}{x}+5+k\)</li>
+<li>\(\int 0 \,dx \overset{?}{=} k\)</li>
+<li>\(\int \frac{6}{\sqrt{x}} \,dx \overset{?}{=} 12 \sqrt{x} -9 +k\)</li>
+<li>\(\int e^{2x} \,dx \overset{?}{=} 2 e^{2x} +k\)</li>
+<li>\(\int \left( e^x \right)^2 \,dx \overset{?}{=} \frac{9^x}{\ln \left( 9 \right)} +k\)</li>
+<li>\(\int - \ln \left( x \right) \,dx \overset{?}{=} 3 +x-x \cdot \ln \left( x \right)+k\)</li>
+
+</ol>
+
+</section>
+<section id="slide-orge165c56">
+<h3 id="orge165c56">Regneregler for stamfunktioner</h3>
+<div style="font-size: 60%;">
+<p>
+Regnereglerne er lånt fra den centralt udleverede formelsamling til mat A.
+</p>
+
+<div class="column" style="float:left; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2020-12-09_16-27-10_screenshot.png" alt="2020-12-09_16-27-10_screenshot.png" width="550px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+<div class="figure">
+<p><img src="img/2020-12-09_16-21-02_screenshot.png" alt="2020-12-09_16-21-02_screenshot.png" width="550px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org720206a">
+<h3 id="org720206a">Eksempel 1</h3>
+<div style="font-size: 60%;">
+<p>
+Vi skal udføre det ubestemte integral
+\[\int x^2 - \frac{1}{x} + \sin(x) \,dx\]
+</p>
+<ul>
+<li class="fragment appear">Først splittes integralet i mange små.</li>
+<li class="fragment appear">\(\int x^2 - \frac{1}{x} + \sin(x) \,dx = \int x^2 \,dx- \int \frac{1}{x}\,dx + \int \sin(x) \,dx\)</li>
+<li class="fragment appear">Hvert integral bestemmes hver for sig</li>
+<li class="fragment appear">\(\int x^2 \,dx- \int \frac{1}{x}\,dx + \int \sin(x) \,dx = \frac{x^3}{3} + k_1 - \ln \left( \left| x \right| \right) +k_2 - \cos \left( x \right) +k_3\)</li>
+<li class="fragment appear">Alle tre integrationskonstanter lægges sammen til en <i>fælles</i> integrationskonstant \(k\)</li>
+<li class="fragment appear">\(\int x^2 - \frac{1}{x} + \sin(x) \,dx = \frac{x^3}{3} - \ln \left( \left| x \right| \right) - \cos \left( x \right) +k\)</li>
+
+</ul>
+
+</section>
+<section id="slide-org2097f4b">
+<h3 id="org2097f4b">Eksempel 2</h3>
+<div style="font-size: 60%;">
+<p>
+Vi skal finde <i>samtlige</i> stamfunktioner til følgende funktion:
+</p>
+
+<p>
+\[f(x) = \sqrt{x} +7\]
+</p>
+
+<ul>
+<li class="fragment appear">\(F(x) = \int f(x) \,dx = \int \sqrt{x} + 7 \, dx\)</li>
+<li class="fragment appear">\(F(x) = \int x^{\frac{1}{2}} \, dx + \int 7 \, dx\)</li>
+<li class="fragment appear">\(F(x) = \frac{x^{\frac{1}{2}+1}}{\frac{1}{2}+1} + 7 x\)</li>
+<li class="fragment appear">\(F(x) = \frac{2}{3}x^{\frac{3}{2}} + 7 x\)</li>
+<li class="fragment appear">Når der står <i>samtlige</i> stamfunktioner, betyder det, at vi skal lægge en integrationskonstant til.</li>
+<li class="fragment appear">\(F(x) = \frac{2}{3}x^{\frac{3}{2}} + 7x+k\)</li>
+
+</ul>
+</section>
+<section id="slide-org059ab66">
+<h3 id="org059ab66">Opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Angiv, uden brug af CAS, følgende ubestemte integraler:
+</p>
+<ol>
+<li>\(\int \ln (x) - 2 x^{- \frac{1}{2}} \, dx\)</li>
+<li>\(\int 2 \sin \left( x \right) + 5 \cos \left( x \right) \, dx\)</li>
+<li>\(\int \frac{1}{x} + e^x \,dx\)</li>
+<li>\(\int x \cdot \left( \frac{1}{x}+1 \right) \,dx\)</li>
+<li>\(\int \frac{x^2-4}{x-2} \,dx\) (Denne kan være lidt drilsk :) )</li>
+
+</ol>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+Bestem, uden brug af CAS, samtlige stamfunktioner til følgende funktioner
+</p>
+<ol>
+<li>\(f(x) = x + \frac{1}{x}\)</li>
+<li>\(f(x) = \frac{4}{\sqrt{x}}\)</li>
+<li>\(f(x) = \pi\)</li>
+<li>\(f(x) =2^x + e^{2 x}\)</li>
+<li>\(f(x) = \frac{\cos (x) + 12 x}{4}\)</li>
+
+</ol>
+</div>
+</section>
+<section id="slide-orgc67e986">
+<h3 id="orgc67e986">Beviser</h3>
+<p>
+Anvend <i>integrationsprøven</i> (differentier) til at bevise reglerne fra formelsamlingen:
+</p>
+
+
+<div class="figure">
+<p><img src="img/2020-12-09_16-21-02_screenshot.png" alt="2020-12-09_16-21-02_screenshot.png" width="550px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org43f2903">
+<h2 id="org43f2903">Bestemte integraler</h2>
+<div style="font-size: 60%;">
+<p>
+Anvendes til at bestemme arealer med fortegn mellem en funktion og x-aksen.
+</p>
+<blockquote>
+<div>
+\begin{align*}
+\int_a^b f(x) \,dx = \left[ F(x) \right]_a^b = F(b) - F(a)
+\end{align*}
+
+</div>
+</blockquote>
+
+
+<div class="figure">
+<p><img src="img/2020-12-13_17-02-10_csm_266_bestemt_1_244px_a1bd8f7e28.png" alt="2020-12-13_17-02-10_csm_266_bestemt_1_244px_a1bd8f7e28.png" width="400px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgd1df4fd">
+<h3 id="orgd1df4fd">Arealer mellem graf og x-aksen med fortegn</h3>
+<div style="font-size: 60%;">
+<p>
+Lad os undersøge det bestemte integral af \(\sin \left( x \right)\) med forskellige grænser:
+</p>
+
+<div>
+\begin{align*}
+\int_0^{\pi/2} \sin \left( x \right) \, dx &= \\
+\int_0^{\pi} \sin \left( x \right) \, dx &= \\
+\int_0^{\frac{3}{2}\pi} \sin \left( x \right) \, dx &= \\
+\int_0^{2 \pi} \sin \left( x \right) \, dx &= \\
+\int_{\pi}^{2 \pi} \sin \left( x \right) \, dx &= 
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<p>
+Konklusion:
+</p>
+<ul>
+<li class="fragment appear">Arealer <i>over</i> x-aksen er positive.</li>
+<li class="fragment appear">Arealer <i>under</i> x-aksen er negative.</li>
+<li class="fragment appear">Hvis man skal finde <i>absolutte</i> arealer, skal man sørge for at inddele integralet i flere mindre integraler ift skæringspunkter på x-aksen.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgc6b17e0">
+<h3 id="orgc6b17e0">Opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Opgave 1</b>
+</p>
+
+<p>
+For integralet 
+</p>
+
+<p>
+\[A = \int_1^5 0.1 x^2 +1 \, dx\]
+</p>
+
+<ol>
+<li>Skitser arealet i et koordatsystem.</li>
+<li>Beregn arealet uden brug af CAS.</li>
+
+</ol>
+
+<p>
+<b>Opgave 2</b>
+</p>
+
+<p>
+Følgende funktion er givet:
+</p>
+
+<p>
+\[f(x) = -x^2+3x+4\]
+</p>
+
+<ol>
+<li>Bestem arealet, som er afgrænset af af den del af grafen for f, der er beliggende over x-aksen.</li>
+
+</ol>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Opgave 3</b>
+</p>
+
+<p>
+Bestem arealet, der begrænses af grafen for \(f(x)=x^3\), x-aksen og linjerne \(x=-1\) og \(x=1\).
+</p>
+
+<p>
+<b>Opgave 4</b>
+</p>
+
+<p>
+Bestem arealet, der begrænses af x-aksen og grafen for 
+</p>
+
+<p>
+\[f(x) = (x+1)\cdot(x-3)\cdot(x-5)\,.\]
+</p>
+</div>
+
+</section>
+<section id="slide-org60a7ec4">
+<h3 id="org60a7ec4">Areal mellem kurver</h3>
+
+<div class="figure">
+<p><img src="img/2020-12-16_12-58-55_csm_273_mellem_244px_51b4d2f393.png" alt="2020-12-16_12-58-55_csm_273_mellem_244px_51b4d2f393.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section>
+<p>
+Nu skal I selv på opdagelse!
+</p>
+
+<p>
+I skal undersøge/besvare spørgsmålene på de tre følgende slide:
+</p>
+<p class="fragment (appear)">
+Alle hjælpemidler er tilladte! (CAS, matematikbøger, beregninger i hånden, etc).
+</p>
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Hvordan vil I beregne arealet mellem 2 funktioner som <b>begge ligger over</b> x-aksen? F.eks. \(f(x)=- \frac{1}{4}x^2 + 4x +3\) og \(g(x)=\frac{1}{2}x + 1\) mellem \(a=2\) og \(b=14\)?.
+</p>
+
+
+<div class="figure">
+<p><img src="img/2020-12-16_13-27-49_screenshot.png" alt="2020-12-16_13-27-49_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Hvordan vil I beregne arealet mellem 2 funktioner, som <b>begge ligger under</b> x-aksen? F.eks. \(f(x)=- \frac{1}{4}x^2 + 4x -20\) og \(g(x)=\frac{1}{2}x -22\) mellem \(a=2\) og \(b=14\)?
+</p>
+
+
+<div class="figure">
+<p><img src="img/2020-12-16_20-30-46_screenshot.png" alt="2020-12-16_20-30-46_screenshot.png" width="600px" />
+</p>
+</div>
+
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Hvordan vil I beregne arealet mellem 2 funktioner, som <b>ligger delvist over og under</b> x-aksen? F.eks. \(f(x)=- \frac{1}{4}x^2 + 4x -10\) og \(g(x)=\frac{1}{2}x -12\) mellem \(a=2\) og \(b=14\)?
+</p>
+
+
+<div class="figure">
+<p><img src="img/2020-12-16_13-34-06_screenshot.png" alt="2020-12-16_13-34-06_screenshot.png" width="600px" />
+</p>
+</div>
+
+</section>
+<section id="slide-org9ae3edf">
+<h3 id="org9ae3edf">Opsumering</h3>
+<div style="font-size: 60%;">
+<p>
+Hvad fandt I ud af?
+</p>
+
+<p class="fragment (appear)">
+Hvad der står i lærebøgerne.
+</p>
+
+<p class="fragment (appear)">
+Arealet mellem to grafer:
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+\text{Areal}_{f-g} = \int_a^b f(x) - g(x) \,dx
+\end{align*}
+
+</div>
+<p class="fragment (appear)">
+gælder <i>altid</i> lige gyldigt, om funktionerne er over, under eller delvist over eller under x-aksen. Dog skal \(f(x) \geq g(x)\) i intervallet \(x=[a\,;\,b]\).
+</p>
+
+<p class="fragment (appear)">
+Ekstra spørgsmål:
+Hvad vil der ske, hvis \(f(x)\) og \(g(x)\) krydser hinanden inden for integrationsintervallet?
+</p>
+
+</section>
+<section id="slide-org2a64bc4">
+<h3 id="org2a64bc4">Opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Opgave 1</b>
+</p>
+
+<p>
+Bestem arealet af den lukkede figur, der dannes af følgende funktioner:
+</p>
+
+<div>
+\begin{align*}
+f(x) &= -x^2+2x+1 \\
+g(x) &= -\frac{1}{2}x +1
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Opgave 2</b>
+</p>
+
+<p>
+Bestem det røde areal, som vist på figuren vha integralregning:
+</p>
+
+
+<div class="figure">
+<p><img src="img/2020-12-16_21-19-11_screenshot.png" alt="2020-12-16_21-19-11_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+<b>Ekstraopgave</b>
+</p>
+
+<p>
+Beregn en tilnærmet værdi af arealet af disse skønne solbrillers glas.
+</p>
+
+
+
+<div class="figure">
+<p><img src="img/2020-12-16_21-39-08_screenshot.png" alt="2020-12-16_21-39-08_screenshot.png" width="1000px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org26db51a">
+<h2 id="org26db51a">Integralregningens middelværdisætning</h2>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 70%">
+<blockquote>
+<p>
+Sætning 10.11
+</p>
+
+<p>
+For en kontinuert funktion \(f(x)\) findes der et tal \(c\) i et interval imellem \(a\) og \(b\) således at:
+</p>
+
+<p>
+\[f(c) = \frac{F(b)-F(a)}{b-a} = \frac{1}{b-a} \int_a^b f(x) \,dx\]
+</p>
+
+<p>
+Den fundne funktionsværdi kaldes for funktionens middelværdi i intervallet.
+</p>
+</blockquote>
+</div>
+
+<div class="column" style="float:right; width: 30%">
+
+<div class="figure">
+<p><img src="img/2020-12-16_21-52-25_csm_280_side20_42ed8e3c53.png" alt="2020-12-16_21-52-25_csm_280_side20_42ed8e3c53.png" width="600px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-org8c1b1a6">
+<h3 id="org8c1b1a6">Opgave</h3>
+
+<div class="figure">
+<p><img src="img/2020-12-16_21-55-40_screenshot.png" alt="2020-12-16_21-55-40_screenshot.png" width="450px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3ad3adf">
+<h2 id="org3ad3adf">Udvalgte løsningsmetoder</h2>
+<ul>
+<li>Substitutionsmetoden</li>
+<li>Partiel integration</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org4b42fad">
+<h2 id="org4b42fad">Substitutionsmetoden</h2>
+<p>
+Når integranden indeholder en sammensat funktion, kan integralet <i>nogen</i> gange vha substitutionsmetoden. 
+</p>
+
+</section>
+<section id="slide-orgb0f15b4">
+<h3 id="orgb0f15b4">Sætning 3.1</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+Hvis \(f\) og \(g\) er kontinuerte funktioner, og \(g\) er differentiabel, gælder ved sammensætning af \(f\) og \(g\), at 
+</p>
+
+<p>
+\[\int f(g(x))\cdot g'(x) \,dx = F(g(x))\,.\]
+</p>
+
+<p>
+Metoden kaldes <i>integration ved substitution</i>.
+</p>
+</blockquote>
+
+<ul>
+<li class="fragment appear">Den er ikke så anvendelig lige nu, men prøv lige at bevis den.</li>
+<li class="fragment appear">Anvend <i>integrationsprøven</i> til at bevise det.</li>
+<li class="fragment appear">(Altså differentiér begge sider af lighedstegnet og tjek, at de to sider stadig er lig hinanden).</li>
+
+</ul>
+</section>
+<section id="slide-orge65929c">
+<h3 id="orge65929c">Anvendelse</h3>
+<div style="font-size: 60%;">
+<p>
+Et eksempel siger ofte mere end en sætning. Vi ser på integralet
+</p>
+
+<p>
+\[\int \cos \left( 2 x \right)\,dx\]
+</p>
+
+<ul>
+<li class="fragment appear">Først sættes den <i>indre</i> funktion \(g(x)\) til at være \(2x\) og den får også lige et andet navn f.eks. \(t=2x\).</li>
+<li class="fragment appear">Nu kan integralet skrives som \[ \int \cos \left( t \right) \,dx\]</li>
+<li class="fragment appear">Men vi kan ikke have blandinger af \(t\) og \(x\).</li>
+<li class="fragment appear">Et udtryk for \(dx\) kan findes ved at <i>differentiere</i> udtrykket for \(t\) og så isolere \(dt\) i ligningen (som var \(\frac{dt}{dx}\) bare en brøk). \[\frac{dt}{dx} = 2 \to dx = \frac{dt}{2}\]</li>
+
+</ul>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Nu kan integralet skrives som
+\[\int cos (t) \cdot \frac{dt}{2} = \frac{1}{2} \int \cos (t) \,dt\]
+</p>
+
+<ul>
+<li class="fragment appear">Integralet mht \(t\) kan nu simpelt udregnes \[\frac{1}{2}\int \cos (t) \,dt = \frac{1}{2} \sin (t) + k\].</li>
+<li class="fragment appear">Men vi er ikke færdige endnu. Vi skulle jo integrere mht \(x\) og ikke \(t\).</li>
+<li class="fragment appear">Sidste skridt er at indsætte det oprindelige udvalgte udtryk for \(t\) , altså   \[\frac{1}{2} \sin (t) + k = \frac{1}{2} \sin (2x) + k\]</li>
+<li class="fragment appear">Altså gælder \[\int \cos \left( 2x \right) \,dx = \frac{1}{2} \sin \left( 2x \right) +k\]</li>
+
+</ul>
+</section>
+<section id="slide-org08af0d4">
+<h3 id="org08af0d4">Et andet forsøg</h3>
+<div style="font-size: 50%;">
+<p>
+Hvad så med 
+</p>
+
+<p>
+\[\int \cos \left( x^2 \right) \,dx\].
+</p>
+
+<ul>
+<li class="fragment appear">Der forsøges med \(t= x^2\), så integralet bliver \[\int \cos \left( t \right) \,dx\].</li>
+<li class="fragment appear">Så findes et udtryk for \(dx\) \[\frac{dt}{dx} = 2 x \to dx = \frac{dt}{2x}\]</li>
+<li class="fragment appear">Her er der et problem! \[\int \cos (t) \cdot \frac{dt}{2x}\]</li>
+<li class="fragment appear">Man kan ikke have en blanding af \(t\) og \(x\), når der integreres.</li>
+
+</ul>
+
+</section>
+<section id="slide-orgd0a771a">
+<h3 id="orgd0a771a">et tredje eksempel</h3>
+<div style="font-size: 50%;">
+<p>
+Det her ser <i>svært</i> ud:
+</p>
+
+<p>
+\[\int x \cdot \sqrt{x^2-7} \,dx\]
+</p>
+<p class="fragment (appear)">
+Indfører \(t = x^2-7\) og \(\frac{dt}{dx} = 2x \to dx = \frac{dt}{2x}\)
+</p>
+<p class="fragment (appear)">
+\[\int x \cdot \sqrt{x^2-7} \,dx = \int x \cdot \sqrt{t} \cdot \frac{dt}{2x} = \frac{1}{2} \int \frac{x \sqrt{t}}{x} \,dt = \frac{1}{2}\int \sqrt{t} \, dt\]
+</p>
+<p class="fragment (appear)">
+Nu kan integralet løses nemt
+\[ \frac{1}{2}\int \sqrt{t} \,dt = \frac{1}{2}\int t^{\frac{1}{2}}\, dt = \frac{1}{2} \frac{t^{\frac{3}{2}}}{\frac{3}{2}} + k = \frac{1}{3}t^{\frac{3}{2}}+ k\]
+</p>
+<p class="fragment (appear)">
+Til sidst indsættes det oprindelige udtryk for \(t\) på \(t\)'s plads således at
+\[\int x \cdot \sqrt{x^2-7} \,dx = \frac{1}{3} \left( x^2-7 \right)^{\frac{3}{2}} +k\] 
+</p>
+
+</section>
+<section id="slide-orgac40351">
+<h3 id="orgac40351">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Bestem de følgende ubestemte integaler vha substitutionsmetoden.
+</p>
+
+<ol>
+<li>\(\int \left( 3x -2 \right)^4 \,dx\)</li>
+<li>\(\int \cos \left( x^3 \right) x^2 \,dx\)</li>
+<li>\(\int x \cdot \tan \left( x^2 \right)\,dx\)</li>
+<li>\(\int 2^x \cdot \sqrt{2^x} \,dx\) (Denne kræver nogle omskrivninger først).</li>
+
+</ol>
+
+</section>
+<section id="slide-org7ea256e">
+<h3 id="org7ea256e">Substitutionsmetoden og <i>bestemte</i> integraler</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+<b>Sætning 3.2</b>
+</p>
+
+<p>
+Hvis \(f\) og \(g\) er kontinuerte funktioner i intervallet fra \(a\) til \(b\), og \(g\) er differentiabel, gælder ved sammensætning af \(f\) og \(g\), at 
+</p>
+
+<p>
+\[\int_a^b f(g(x)) \cdot g'(x) \,dx = \int_{g(a)}^{g(b)}f(t)dt\]
+</p>
+</blockquote>
+
+<p class="fragment (appear)">
+<b>Det vigtige:</b> Integrationsgrænserne skal tilpasses!
+</p>
+
+</section>
+<section id="slide-org2f5c4fc">
+<h3 id="org2f5c4fc">På opdagelse</h3>
+<p>
+Find ud af hvad det vil sige, at integrationsgrænserne skal tilpasses. Alle hjælpemidler er tilladte.
+</p>
+
+</section>
+<section id="slide-orge8f5aed">
+<h3 id="orge8f5aed">Eksempel</h3>
+<div style="font-size: 60%;">
+<p>
+\[\int_0^2 5 x \cdot \sqrt{2x^2+3} \,dx\]
+</p>
+<p class="fragment (appear)">
+Indfører \(g(x)=t=2x^2+3\) og \(\frac{dt}{dx} = 4x \to dx = \frac{dt}{4x}\).
+</p>
+<p class="fragment (appear)">
+Integralet er nu
+\[\int_{g(0)}^{g(2)} 5x \cdot \sqrt{t} \cdot \frac{dt}{4x} = \frac{5}{4}\int_{g(0)}^{g(2)} \sqrt{t} \,dt\]
+</p>
+<p class="fragment (appear)">
+Grænserne udregnes og indsættes i integralet
+\[g(0) = 3 \text{ og } g(2)=2 \cdot 2^2 +3 = 11\]
+</p>
+
+<p class="fragment (appear)">
+\[\frac{5}{4}\int_{3}^{11} \sqrt{t} \,dt = \frac{5}{4}\left[ \frac{t^{\frac{3}{2}}}{\frac{3}{2}} \right]_3^{11} = \frac{5\cdot 2}{4\cdot 3}\left[ t^{\frac{3}{2}} \right]_3^{11}=\frac{5}{6}\left[ t^{\frac{3}{2}} \right]_3^{11}= \frac{5}{6} \left( 11^{\frac{3}{2}}-3^{\frac{3}{2}} \right) = 26.07\]
+</p>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Det bestemte integrale kan også løses vha de oprindelige grænser, hvis man finder stamfunktionen vht \(x\) i stedet for \(t\).
+</p>
+
+<p>
+\[\int_0^2 5x \cdot \sqrt{2x^2+3} \,dx = \frac{5}{6} \left[ \left( 2x^2+3 \right)^{\frac{3}{2}} \right]_0^2=\frac{5}{6}\left( 11^{\frac{3}{2}}-3^{\frac{3}{2}} \right) = 26.07\]
+</p>
+
+<p class="fragment (appear)">
+Hvordan I vil gøre det, er helt op til jer.
+</p>
+
+</section>
+<section id="slide-orgdc6180e">
+<h3 id="orgdc6180e">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Bestem de følgende bestemte integaler vha substitutionsmetoden.
+</p>
+
+<ol>
+<li>\(\int_2^{4} \left( x -2 \right)^3 \,dx\)</li>
+<li>\(\int_1^\pi x \cdot \cos \left( x^2-1 \right)\,dx\)</li>
+<li>\(\int_0^{\frac{\pi}{2}} \sin(x)^2\cdot \cos(x)\,dx\)</li>
+<li><p>
+\(\int_{-5}^5 \frac{-1}{x-7}\,dx\) 
+</p>
+
+<p>
+(Selve substitutionen er rimelig simpel, men tungen skal holdes lige i munden, når der skal bruges logaritmeregneregler.)
+</p></li>
+
+</ol>
+
+</section>
+</section>
+<section>
+<section id="slide-orge34bf75">
+<h2 id="orge34bf75">Partiel integration</h2>
+<div style="font-size: 60%;">
+<p>
+Der er som sådan <i>ingen</i> produktregel indenfor integralregning, men partiel integration tager udgangspunkt i produktreglen fra <i>differentialregning</i>.
+</p>
+
+<p>
+Kan <i>nogen gange</i> anvendes, når integranden er (eller kan skrives som) et produkt af to funktioner.
+</p>
+
+</section>
+<section id="slide-orgb142117">
+<h3 id="orgb142117">Udledning</h3>
+<div style="font-size: 60%;">
+<p>
+Begynder med produktreglen fra <i>differentialregning</i>.
+</p>
+
+<p>
+\[\left( f(x) \cdot g(x) \right)' = f'(x) \cdot g(x) + f(x) \cdot g'(x)\] 
+</p>
+<p class="fragment (appear)">
+Integrerer på begge sider af lighedstegnet.
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+\int \left( f(x) \cdot g(x) \right)' \,dx &= \int f'(x) \cdot g(x)\,dx + \int f(x) \cdot g'(x) \,dx\\
+f(x) \cdot g(x) &= \int f'(x) \cdot g(x)\,dx + \int f(x) \cdot g'(x) \,dx
+\end{align*}
+
+</div>
+<p class="fragment (appear)">
+Omarrangerer til
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+\int f'(x) \cdot g(x) \,dx &= f(x) \cdot g(x) - \int f(x) \cdot g'(x) \,dx \text{ eller } \\
+\int f(x) \cdot g'(x) \,dx &= f(x) \cdot g(x) - \int f'(x) \cdot g(x) \,dx
+\end{align*}
+
+</div>
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Man skal altså undervejs finde <i>antiafledte</i> (stamfunktioner). Den antiafledte til \(f'(x)\) er \(f(x)\).
+\[\int f'(x) \cdot g(x) \,dx = f(x) \cdot g(x) - \int f(x) \cdot g'(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+Lad os omskrive til noget, som står I jeres matematikbog.
+</p>
+<p class="fragment (appear)">
+Hvis \(f'(x)\) i integranden på <b>venstre</b> side af lighedstegnet blot skrive som \(f(x)\) så må \(f(x)\) på <b>højre</b> side af lighedstegnet skrives som \(F(x)\) (stamfunktionen) i begge led, altså
+</p>
+<p class="fragment (appear)">
+\[\boxed{\int f(x) \cdot g(x) \,dx = F(x) \cdot g(x) - \int F(x) \cdot g'(x) \,dx}\]
+</p>
+<p class="fragment (appear)">
+Det samme kan også gøres for \(g(x)\):
+\[\boxed{\int f(x) \cdot g(x) \,dx = f(x) \cdot G(x) - \int f'(x) \cdot G(x) \,dx}\]
+</p>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Partiel integration gælder også for <i>bestemte integraler</i>:
+</p>
+
+<p>
+\[\boxed{\int_a^b f(x) \cdot g(x) \,dx = \left[F(x) \cdot g(x)\right]_a^b - \int_a^b F(x) \cdot g'(x) \,dx}\]
+</p>
+
+<p>
+\[\boxed{\int_a^b f(x) \cdot g(x) \,dx = \left[f(x) \cdot G(x)\right]_a^b - \int_a^b f'(x) \cdot G(x) \,dx}\]
+</p>
+</section>
+<section id="slide-org4613935">
+<h3 id="org4613935">Gode råd til partiel integration</h3>
+<ul>
+<li>Forsøg med metoden, når integranden består af et produkt af to funktioner.</li>
+<li>Metoden kan være brugbar, hvis en af de to faktorer i funktionen forsinder i processen.</li>
+<li>Vælg \(f\) og \(g\) , så der er noget, som (forhåbentligt) forsvinder ved differentiation eller integration.</li>
+
+</ul>
+
+</section>
+<section id="slide-orga686d10">
+<h3 id="orga686d10">Kan det så bruges til noget?</h3>
+<div style="font-size: 60%;">
+<p>
+\[\int x \cdot \sin(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+Vælger \(f(x)=x\) og \(g(x)=\sin(x)\) og anvender
+\[\int f(x) \cdot g(x) \,dx = f(x) \cdot G(x) - \int f'(x) \cdot G(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+\[\int x \cdot \sin(x) \,dx = x \cdot \left( -\cos(x) \right) - \int 1 \cdot \left( -\cos(x) \right) \,dx = -x\cdot \cos(x) + \sin(x) + k\]
+</p>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Hvad sker der, hvis vi bytter om på \(f(x)\) og \(g(x)\)?
+\[\int x \cdot \sin(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+Vælger \(g(x)=x\) og \(f(x)=\sin(x)\) og anvender
+\[\int f(x) \cdot g(x) \,dx = f(x) \cdot G(x) - \int f'(x) \cdot G(x) \,dx\]
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+\int x \cdot \sin (x) \,dx = \sin(x)\cdot \frac{x^2}{2} - \int \cos(x) \cdot \frac{x^2}{2}\,dx
+\end{align*}
+
+</div>
+
+<p class="fragment (appear)">
+<b>Det blev ikke ligefrem nemmere. :)</b>
+</p>
+
+</section>
+<section id="slide-org39d1f14">
+<h3 id="org39d1f14">Opgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Anvend partiel integration til at bestemme de følgende ubestemte integraler uden brug af CAS.
+</p>
+
+<ol>
+<li>\(\int x \cdot e^x\,dx\)</li>
+<li>\(\int x^2 \cdot \ln(x)\,dx\)</li>
+<li>\(\int x \cdot 2^x\,dx\)</li>
+<li>\(\int \ln(x)^2\,dx\) (omskriv integranden til \(\ln(x)\cdot \ln(x)\))</li>
+<li>\(\int \sin\left(\sqrt{x}\right) \,dx\) (brug først substitutionsmetoden med \(t=\sqrt{x}\) og brug efterfølgende partiel integration).</li>
+
+</ol>
+</section>
+<section id="slide-org693217f">
+<h3 id="org693217f">Et andet eksempel</h3>
+<div style="font-size: 60%;">
+<p>
+\[\int \sin(x) \cdot \cos(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+Vælger \(f(x)=\sin(x)\) og \(g(x)=\cos(x)\) og anvender
+\[\int f(x) \cdot g(x) \,dx = f(x) \cdot G(x) - \int f'(x) \cdot G(x) \,dx\]
+</p>
+
+<p class="fragment (appear)">
+\[\int \sin(x)\cdot\cos(x)\,dx = \sin(x) \cdot \sin(x) - \int \cos(x) \cdot \sin(x) \,dx\]
+</p>
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+\[\int \sin(x)\cdot\cos(x)\,dx = \sin(x) \cdot \sin(x) - \int \cos(x) \cdot \sin(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+Her ses det, at integralet på venstre side er identisk med sidste integral på højre side.
+</p>
+<p class="fragment (appear)">
+Derfor isoleres integralet i ligningen:
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+\int \sin(x)\cdot\cos(x)\,dx &= \sin(x) \cdot \sin(x) - \int \cos(x) \cdot \sin(x) \,dx \\
+2 \cdot \int \sin(x)\cdot\cos(x)\,dx &=\sin(x)^2 \\
+\int \sin(x)\cdot\cos(x)\,dx &=\frac{1}{2}\cdot \sin(x)^2
+\end{align*}
+
+</div>
+<p class="fragment (appear)">
+Til sidst skal vi lige huske <i>integrationskonstanten</i>.
+\[\boxed{\int \sin(x) \cdot \cos(x) \,dx = \frac{1}{2}\cdot \sin (x)^2 +k}\]
+</p>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Hvad nu, hvis vi bytter om på \(f(x)\) og \(g(x)\)?
+\[\int \sin(x) \cdot \cos(x) \,dx\]
+</p>
+<p class="fragment (appear)">
+Vælger \(f(x)=\sin(x)\) og \(g(x)=\cos(x)\) og anvender
+\[\int f(x) \cdot g(x) \,dx = F(x) \cdot g(x)  - \int F(x) \cdot g'(x) \,dx\]
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+\int \sin(x) \cdot \cos(x) \,dx &= -\cos(x)\cdot \cos(x) - \int -\cos(x) \cdot \left( - \sin(x) \right)\,dx \\
+\int \sin(x) \cdot \cos(x) \,dx &= -\cos(x)^2 - \int \cos(x) \cdot \sin(x) \,dx \\
+2\cdot \int \sin(x) \cdot \cos(x) \,dx &= -\cos(x)^2  \\
+\int \sin(x) \cdot \cos(x) \,dx &= -\frac{1}{2} \cdot \cos(x)^2 
+\end{align*}
+
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Hov, umiddelbart har vi fået <b>2</b> forskellige stamfunktioner.
+</p>
+<p class="fragment (appear)">
+Første metode gav os
+\[\int \sin(x) \cdot \cos(x) \,dx = \frac{1}{2}\cdot \sin (x)^2\]
+</p>
+<p class="fragment (appear)">
+Anden metode gav os
+\[\int \sin(x) \cdot \cos(x) \,dx = -\frac{1}{2}\cdot \cos (x)^2\]
+</p>
+<p class="fragment (appear)">
+De to funktioner er <i>ikke</i> umiddelbart ens.
+</p>
+</section>
+<section>
+<div style="font-size: 60%;">
+
+
+<div class="figure">
+<p><img src="img/2021-01-03_18-42-31_screenshot.png" alt="2021-01-03_18-42-31_screenshot.png" width="600px" />
+</p>
+</div>
+
+<p class="fragment (appear)">
+Men de kan <b>blive</b> ens, med det rette valg af <i>integrationskonstant</i>.
+</p>
+<p class="fragment (appear)">
+Hvilken?
+</p>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Ja, det er rigtigt. Der er kun \(1/2\) til forskel mellem de to funktioner.
+</p>
+
+
+<div class="figure">
+<p><img src="img/2021-01-03_19-43-13_screenshot.png" alt="2021-01-03_19-43-13_screenshot.png" width="600px" />
+</p>
+</div>
+<p class="fragment (appear)">
+Det passer også med <i>idiotformlen</i> (trigonometriens grundrelation).
+\[\sin(x)^2+\cos(x)^2 = 1 \to \frac{1}{2}\sin(x)^2 = - \frac{1}{2}\cos(x)^2 + \frac{1}{2}\]
+</p>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Konklusion:
+\[\int \sin(x)\cdot \cos(x) \,dx = \frac{1}{2}\cdot \sin(x)^2 + k\]
+eller
+\[\int \sin(x)\cdot \cos(x) \,dx = - \frac{1}{2}\cdot \cos(x)^2 + k\]
+da det rette valg af integrationskonstant kan bringe de to stamfunktioner til at være ens.
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org0c5342d">
+<h2 id="org0c5342d">Anvendelse af integralregning</h2>
+
+<div class="figure">
+<p><img src="img/2021-01-14_09-55-28_csm_121_Forskellige_anvendelser_328b60fe0c.png" alt="2021-01-14_09-55-28_csm_121_Forskellige_anvendelser_328b60fe0c.png" height="400px" />
+</p>
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org256b619">
+<h2 id="org256b619">Omdrejningslegemer</h2>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+Rumlige figurer, der fremkommer ved symmetrisk rotation af et tværsnit om en ret linje.
+</p>
+</blockquote>
+<p>
+Tænk på en drejebænk, en trædrejer og at dreje vaser i ler.
+</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/E4ex8YSCmIc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Omdrejninglegemerne fremkommer typisk ved at dreje funktioner omkring enten x-aksen eller y-aksen.
+</p>
+<div class="column" style="float:left; width: 50%">
+<p>
+\(f(x)=x^2\) drejet om x-aksen:
+</p>
+
+
+
+<div class="figure">
+<p><img src="img/2021-01-08_11-31-19_screenshot.png" alt="2021-01-08_11-31-19_screenshot.png" height="500px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+\(f(x)=x^2\) drejet om y-aksen
+</p>
+
+
+
+<div class="figure">
+<p><img src="img/2021-01-10_13-49-44_screenshot.png" alt="2021-01-10_13-49-44_screenshot.png" height="500px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-org7a2e9a8">
+<h3 id="org7a2e9a8">Hvordan gør man så det?</h3>
+
+</section>
+<section id="slide-org1987ef0">
+<h3 id="org1987ef0">Drejning om x-aksen</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+Når en kontinuert positiv funktion \(f\) defineret i intervallet \(x_1 \leq x \leq x_2\) drejes \(360^{\circ}\) om x-aksen, opstår et rumligt objekt med rumfanget
+</p>
+
+<p>
+\[V_x = \int_{x_1}^{x_2} \pi \cdot f(x)^2\,dx\]
+</p>
+</blockquote>
+
+<ul>
+<li class="fragment appear">Tænk på en hel masse cylindre lagt sammen.</li>
+
+</ul>
+</section>
+<section id="slide-org8d9713a">
+<h4 id="org8d9713a">Eksempel</h4>
+<div style="font-size: 60%;">
+<p>
+Lad os finde rumfanget af vores "snurretop" fra eksemplet:
+</p>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li class="fragment appear">Grænserne vælges til \(x_1=0\) og \(x_2=2\).</li>
+<li class="fragment appear">Alt indsættes i formlen. Integralet kan "let" bestemmes.</li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+V_x &= \int_0^2 \pi \cdot \left( x^2 \right)^2\,dx \\
+&= \pi \int_0^2x^4\,dx = \pi \left[ \frac{x^5}{5} \right]_0^2 \\
+&= \frac{\pi}{5} \cdot 2^5 - \frac{\pi}{5}\cdot 0^5 \\
+&= \frac{\pi}{5} \cdot 32 = 20.17
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-08_11-31-19_screenshot.png" alt="2021-01-08_11-31-19_screenshot.png" height="400px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-orgfbf317b">
+<h3 id="orgfbf317b">Drejning af areal mellem to funktioner omkring x-aksen</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+For to positive kontinuerte funktioner \(f(x)\) og \(g(x)\) defineret i intervallet \(x_1\leq x \leq x_2\) opstår der er rumtligt objekt, når arealet mellem de to funktioners grafer og linjerner \(x=x_1\) og \(x = x_2\) roteres \(360^{\circ}\) om x-aksen. Rumfanget bestemmes som:
+</p>
+
+<p>
+\[V_x = \pi \int_{x_1}^{x_2} f(x)^2 - g(x)^2 \, dx\]
+</p>
+</blockquote>
+</section>
+<section id="slide-orgbc13f1b">
+<h3 id="orgbc13f1b">Drejning om y-aksen</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+Når en kontinuert positiv funktion \(f\) defineret i intervallet \(x_1 \leq x \leq x_2\) drejes \(360^{\circ}\) om y-aksen, opstår et rumligt objekt med rumfanget
+</p>
+
+<p>
+\[V_y = 2 \pi \int_{x_1}^{x_2} f(x)\cdot x\,dx\]
+</p>
+</blockquote>
+<ul>
+<li class="fragment appear">Her skal I tænke på en hel masse cylinderringe langt sammen.</li>
+<li class="fragment appear">(Det er nok ikke lige så nemt at huske på cylinderringe, da de ikke er brugt lige så ofte som cylindre).</li>
+
+</ul>
+
+</section>
+<section id="slide-org134c83f">
+<h4 id="org134c83f">Eksempel</h4>
+<div style="font-size: 60%;">
+<p>
+Lad os finde rumfanget af vores "skål" fra eksemplet:
+</p>
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li class="fragment appear">Grænserne vælges til \(x_1=0\) og \(x_2=2\). (<b>Læg mærke til valget</b>)</li>
+<li class="fragment appear">Alt indsættes i formlen. Integralet kan "let" bestemmes.</li>
+
+</ul>
+<div class="fragment (appear)">
+\begin{align*}
+V_y &= 2 \cdot \pi \int_0^2 x^2 \cdot x\,dx \\
+V_y &= 2 \cdot \pi \int_0^2 x^3 \,dx \\
+V_y &= 2 \cdot \pi \left[ \frac{x^4}{4} \right]_0^2\,dx \\
+V_y &= 2 \cdot \pi \left( \frac{2^4}{4} - \frac{0^4}{4}\right) \\
+V_y &= 8 \cdot \pi = 25.13
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-10_13-49-44_screenshot.png" alt="2021-01-10_13-49-44_screenshot.png" height="500px" />
+</p>
+</div>
+</div>
+</section>
+<section id="slide-orga3eea6f">
+<h3 id="orga3eea6f">Drejning af areal mellem to funktioner omkring y-aksen</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+For to positive kontinuerte funktioner \(f(x)\) og \(g(x)\) defineret i intervallet \(x_1\leq x \leq x_2\) opstår der er rumtligt objekt, når arealet mellem de to funktioners grafer og linjerner \(x=x_1\) og \(x = x_2\) roteres \(360^{\circ}\) om x-aksen. Rumfanget bestemmes som:
+</p>
+
+<p>
+\[V_y = 2\pi \int_{x_1}^{x_2} \left(f(x) - g(x)\right) \cdot x \, dx\]
+</p>
+</blockquote>
+</section>
+<section id="slide-orga20c07d">
+<h3 id="orga20c07d">Opgaver</h3>
+<div style="font-size: 50%;">
+
+<div class="column" style="float:left; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-10_14-46-09_screenshot.png" alt="2021-01-10_14-46-09_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-10_14-46-25_screenshot.png" alt="2021-01-10_14-46-25_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section id="slide-org8cd0dde">
+<h3 id="org8cd0dde">Opgave til virtuel undervisning</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 70%">
+<ul>
+<li>Find en sjov genstand i hjemmet, som er rotationssymmetrisk.</li>
+<li>Tag et billede af genstanden. Sørg for at der er noget med i billedet, som I kender størrelsen på og som er i samme afstand til kameraet, som genstanden (f.eks. et tommestok).</li>
+<li>Udveksl genstande med hinanden to og to, og hjælp hinanden med at beregne rumfangene af jeres genstande vha integralregning.
+Dette kan f.eks. gøres ved at:
+<ul>
+<li>indsætte billedet i geogebra</li>
+<li>skalere billedet så akser passer med den virkelige størrelse</li>
+<li>indsætte punkter langs en oplagt profil</li>
+<li>fitte en eller flere funktioner til disse punkter</li>
+<li>beregne rumfang vha integralregning og rotation om x- eller y-aksen</li>
+
+</ul></li>
+<li>Hvis muligt, tjek da rumfanget ved at hælde vand i genstanden og mål efterfølgende denne vandmængde i et måleglas (eller på en vægt).</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 30%">
+
+<div class="figure">
+<p><img src="img/karaffel.jpg" alt="karaffel.jpg" width="300px" />
+</p>
+</div>
+</div>
+
+</section>
+<section id="slide-org00badac">
+<h3 id="org00badac">Hvor kommer formlerne fra?</h3>
+<div class="outline-text-3" id="text-org00badac">
+</div>
+</section>
+<section id="slide-org750ff6f">
+<h4 id="org750ff6f">Beviser</h4>
+<p>
+Give it up for <i><b>Jim Larsen McLean</b></i>
+</p>
+<iframe width="800" height="400" src="https://www.youtube.com/embed/aBYsvrrgRCk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+Find videoen her: <a href="https://youtu.be/aBYsvrrgRCk">https://youtu.be/aBYsvrrgRCk</a>
+</p>
+</section>
+<section id="slide-org8fd643b">
+<h3 id="org8fd643b">Udledning af rumfangsformel for kugle</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+En kugles rumfang beregnes som bekendt med
+</p>
+
+<p>
+\[V_\text{kugle} = \frac{4}{3} \cdot \pi \cdot r^3\]
+</p>
+
+<p class="fragment (appear)">
+Lad os se, hvordan denne formel kan udledes.
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-09_11-56-29_csm_Kapovers_6_3_af41a927bb.jpg" alt="2021-01-09_11-56-29_csm_Kapovers_6_3_af41a927bb.jpg" width="300px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+Først opskrives cirklens ligning for en generel cirkel med centrum i origo og med radius \(r\)
+</p>
+<p class="fragment (appear)">
+\[x^2 + y^2 = r^2\]
+</p>
+<p class="fragment (appear)">
+Denne omskrives til en funktion ved at isolere y
+\[y = \pm \sqrt{r^2 -x^2}\]
+</p>
+<p class="fragment (appear)">
+Her udvælges kun <i>overbollen</i>
+\[f(x)=\sqrt{r^2-x^2}\]
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-11_10-00-31_screenshot.png" alt="2021-01-11_10-00-31_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+\[f(x)=\sqrt{r^2-x^2}\]
+</p>
+
+<p class="fragment (appear)">
+Rumfanget bestemmes ved at rotere den <i>halve</i> <i>overbolle</i> \(360^{\circ}\) om x-aksen, og så multiplicere resultatet med 2. 
+\[V_x = 2 \cdot \pi \int_{x_1}^{x_2} f(x)^2 \,dx\]
+</p>
+<p class="fragment (appear)">
+Grænserne vælges til
+\[x_1=0 \text{ og } x_2=r\]
+</p>
+
+<div class="fragment (appear)">
+\begin{align*}
+V_x &= 2 \cdot \pi \int_{0}^{r} \sqrt{r^2-x^2}^2 \,dx \\
+V_x &= 2 \cdot \pi \int_{0}^{r} r^2-x^2 \,dx 
+\end{align*}
+
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-11_13-48-29_screenshot.png" alt="2021-01-11_13-48-29_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+<section>
+<div style="font-size: 60%;">
+<p>
+Integralet kan nu løses
+</p>
+<div>
+\begin{align*}
+V_x &= 2 \cdot \pi \int_{0}^{r} r^2-x^2 \,dx \\
+V_x &= 2 \cdot \pi  \left[r^2\cdot x - \frac{x^3}{3}  \right]_{0}^{r} \,dx \\
+V_x &= 2 \cdot \pi  \left(r^2\cdot r - \frac{r^3}{3}  - \left( r^2\cdot 0 - \frac{0^3}{3} \right)\right)
+\end{align*}
+
+</div>
+<p class="fragment (appear)">
+Nu kan de forskellige led samles
+</p>
+<div class="fragment (appear)">
+\begin{align*}
+V_x &= 2 \cdot \pi \left( r^3 - \frac{r^3}{3} \right) \\
+V_x &= 2 \cdot \pi \frac{2 r^3}{3}  \\
+V_x &= \frac{4}{3} \cdot \pi r^3
+\end{align*}
+
+</div>
+<p class="fragment (appear)">
+Formlen er nu udledt. :)
+</p>
+</section>
+<section id="slide-org19704a0">
+<h3 id="org19704a0">Opgaver</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>Udled formlen for rumfanget af en kegle vha omdrejningslegemer omkring enten x- eller y-aksen</b>
+</p>
+
+<p>
+Formlen er
+</p>
+
+<p>
+\[V_\text{kegle} = \frac{\pi}{3}\cdot h \cdot r^2\]
+</p>
+
+
+
+<div class="figure">
+<p><img src="img/2021-01-09_11-51-14_csm_fig-25-_2__00d4dc69d8.png" alt="2021-01-09_11-51-14_csm_fig-25-_2__00d4dc69d8.png" height="200px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>Udled formlen for rumfanget af en keglestub vha omdrejningslegemer omkring enten x- eller y-aksen</b>
+</p>
+
+<p>
+Formlen er
+</p>
+
+<p>
+\[V_\text{keglestub} = \frac{\pi}{3}\cdot h \cdot \left(R^2+r^2+R\cdot r\right)\]
+</p>
+
+
+<div class="figure">
+<p><img src="img/2021-01-09_11-51-21_csm_fig-36_1631e52410.png" alt="2021-01-09_11-51-21_csm_fig-36_1631e52410.png" height="200px" />
+</p>
+</div>
+
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc6ccfb7">
+<h2 id="orgc6ccfb7">Kurvelængder</h2>
+<div class="outline-text-2" id="text-orgc6ccfb7">
+</div>
+</section>
+<section id="slide-org2d36b84">
+<h3 id="org2d36b84">Formel</h3>
+<blockquote>
+<p>
+For en differentiabel funktion i intervallet \([a\,,\,b]\) findes kurvelængden ved følgende integral:
+</p>
+
+<p>
+\[l_f = \int_a^b \sqrt{1 + f'(x)^2} \,dx\]
+</p>
+</blockquote>
+
+</section>
+<section id="slide-orgaf08717">
+<h3 id="orgaf08717">Eksempel</h3>
+<div style="font-size: 60%;">
+
+<div class="figure">
+<p><img src="img/2021-01-16_11-09-58_screenshot.png" alt="2021-01-16_11-09-58_screenshot.png" width="500px" />
+</p>
+</div>
+<p class="fragment (appear)">
+Langt de fleste af disse integraler kan kun løses vha et CAS-værktøj, som benytter <i>numerisk integration</i>. Det er meget sjældent at en faktisk stamfunktion kan findes.
+</p>
+
+</section>
+<section id="slide-org7c2ab9e">
+<h3 id="org7c2ab9e">Regneopgaver</h3>
+<div style="font-size: 60%;">
+<p>
+Find kurvelængderne af følgende funktioner i intervallerne \([a,b]\). De kan begge løses i hånden.
+</p>
+<ol>
+<li>\(f(x)= \frac{4}{3} x +2 \,, \quad [a,b] = [0,3]\)</li>
+<li>\(f(x)= \frac{2}{3}x^{\frac{3}{2}}\,,\quad [a,b] = [0,8]\)</li>
+
+</ol>
+</section>
+<section id="slide-org59339fd">
+<h3 id="org59339fd">Fysisk opgave</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Find en lille bold, eller noget andet, som kan tåle at blive kastet.</li>
+<li>Find et sted at kaste bolden, hvor det er muligt at optage kastes vha kameraet i computeren, således at hele boldens bane kan ses på optagelsen.</li>
+<li>Aftal med en kammerat, at vedkommende optager en video af dig, som kaster bolden. Dette kan gøres gennem teams.</li>
+<li>Mål eller estimer boldens start-, top- og slutposition ud fra videoen.</li>
+<li>Brug punkterne til at opstille en forskrift for boldens bane.</li>
+<li><b>Beregn længden af boldens flugt vha integralregning</b>.</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<iframe width="400" height="300" src="https://www.youtube.com/embed/A1R_TDTv6fg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<ul>
+<li>Hav videoer og beregninger klar, så I kan vise dem til jeres klassekammerater senere.</li>
+
+</ul>
+</div>
+</section>
+<section id="slide-org1626c29">
+<h3 id="org1626c29">Bevis</h3>
+<div style="font-size: 60%;">
+<p>
+Her har I et bevis udført af min gamle "rusvejleder" fra min universitetstid. Martin Patrong Haspang bedre kendt som Hålle. :)
+</p>
+<iframe width="600" height="400" src="https://www.youtube.com/embed/fauiaWTrORA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<p>
+Linket er <a href="https://youtu.be/fauiaWTrORA">https://youtu.be/fauiaWTrORA</a>
+</p>
+</section>
+</section>
+<section>
+<section id="slide-org1f43a6f">
+<h2 id="org1f43a6f">Overfladearealer</h2>
+
+<div class="figure">
+<p><img src="img/2021-01-16_11-58-55_image004.gif" alt="2021-01-16_11-58-55_image004.gif" width="600px" />
+</p>
+</div>
+</section>
+<section id="slide-org2869203">
+<h3 id="org2869203">Formel</h3>
+<div style="font-size: 60%;">
+<blockquote>
+<p>
+For en kontinuert funktion \(f\) defineret i intervallet \([a,b]\) findes overfladearealet af det legeme, der opstår, når området imellem grafen for \(f\) og x-aksen roteres \(360^{\circ}\) om x-aksen på følgende måde:
+</p>
+
+<p>
+\[A_\text{overflade} = 2 \pi \int_a^b f(x) \cdot \sqrt{1 + f'(x)^2} \,dx\]
+</p>
+</blockquote>
+
+</section>
+<section id="slide-org9918516">
+<h3 id="org9918516">Eksempel</h3>
+<div style="font-size: 60%;">
+<div class="column" style="float:left; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-16_12-03-34_screenshot.png" alt="2021-01-16_12-03-34_screenshot.png" width="600px" />
+</p>
+</div>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-16_12-07-28_screenshot.png" alt="2021-01-16_12-07-28_screenshot.png" width="600px" />
+</p>
+</div>
+
+</div>
+</section>
+<section id="slide-org6297592">
+<h3 id="org6297592">Opgaver</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<p>
+<b>En specifik opgave</b>
+</p>
+
+<ul>
+<li>Bestem <i>overfladearealet</i> af den kegle, som fremkommer, når den viste punktmængde roteres om x-aksen.</li>
+
+</ul>
+
+
+
+<div class="figure">
+<p><img src="img/2021-01-16_12-19-13_screenshot.png" alt="2021-01-16_12-19-13_screenshot.png" height="200px" />
+</p>
+</div>
+
+<p>
+Hints: Bestem først en funktion for en ret linje gennem \(A\) og \(B\). Brug herefter integralregning.
+</p>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+<p>
+<b>En generel opgave</b>
+</p>
+
+<p>
+Overfladearealet af en kegle beregnes som
+</p>
+
+<p>
+\[O = \pi \cdot r \cdot \sqrt{r^2 + h^2}\]
+</p>
+
+<ul>
+<li>Udled ovenstående formel vha integralregning og følgende figur til hjælp.</li>
+
+</ul>
+
+
+<div class="figure">
+<p><img src="img/2021-01-16_12-24-53_screenshot.png" alt="2021-01-16_12-24-53_screenshot.png" height="200px" />
+</p>
+</div>
+
+<p>
+Hints: Angiv en forskrift for den skrå rette linje. Angiv passende grænser på integralet. Anvend en række algebraregler, når integralet først er løst.
+</p>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgc0fbeb2">
+<h2 id="orgc0fbeb2">Massemidtpunkter</h2>
+
+<div class="figure">
+<p><img src="img/2021-01-17_19-17-30_csm_139_En_vejrhane_f49fc4b4fb.png" alt="2021-01-17_19-17-30_csm_139_En_vejrhane_f49fc4b4fb.png" width="800px" />
+</p>
+</div>
+
+</section>
+<section id="slide-orgfa564fb">
+<h3 id="orgfa564fb">Formel</h3>
+<div style="font-size: 50%;">
+<blockquote>
+<p>
+For to kontinuerte funktioner \(f\) og \(g\), hvor \(f>g\) i intevallet \([a,b]\), findes massemidtpunktet som
+</p>
+
+<div>
+\begin{align*}
+(x_m, y_m) &= \left( \frac{\int_a^b \left( f(x) - g(x) \right)\cdot x \, dx}{\int_a^b f(x) - g(x) \, dx } \, , \, \frac{\frac{1}{2}\int f(x)^2-g(x)^2\, dx}{\int_a^b f(x) - g(x) \, dx} \right)
+\end{align*}
+
+</div>
+</blockquote>
+
+</section>
+<section id="slide-org9ee2cc4">
+<h3 id="org9ee2cc4">Forklaring</h3>
+<p>
+Forklaringen kan findes i jeres matematikbog her: <a href="https://mathtxa.systime.dk/?id=403">https://mathtxa.systime.dk/?id=403</a>
+</p>
+
+</section>
+<section id="slide-org8bf2434">
+<h3 id="org8bf2434">Opgave</h3>
+<div style="font-size: 50%;">
+<div class="column" style="float:left; width: 50%">
+<ul>
+<li>Opfind jeres eget areal, som er indesluttet af to funktioner.</li>
+<li>Tegn funktioner og det indesluttede areal ind i et koordinatsystem.</li>
+<li>Find skæringspunkterne mellem de to grafer. Disse skal bruges som grænser i det kommende integral.</li>
+<li>Beregn massemidtpunktet vha formlen fra tidligere. Brug kun CAS, hvor det er nødvendigt.</li>
+<li>Print eller tegn grafer og areal over på et stykke karton, og klip figuren ud.
+(Hvis I kun har papir til rådighed og ikke nogen printer, så hold papiret op på jeres computerskærm og tegn figuren af over på papiret. Man kan nok lige skimte figuren igennem papiret.)</li>
+<li>Se om I kan få jeres figur til at balancere i jeres beregnede massemidtpunkt. 
+(Hvis I har en nål, så lave en lille fordybning/et lille hul i papiret, så nålen ikke glider.)</li>
+
+</ul>
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-17_19-46-24_screenshot.png" alt="2021-01-17_19-46-24_screenshot.png" height="500px" />
+</p>
+</div>
+</div>
+</section>
+</section>
+<section>
+<section id="slide-orgeacddc3">
+<h2 id="orgeacddc3">Matematikprojekt</h2>
+<div class="column" style="float:left; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-03_21-15-28_screenshot.png" alt="2021-01-03_21-15-28_screenshot.png" height="500px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-03_21-16-08_screenshot.png" alt="2021-01-03_21-16-08_screenshot.png" height="500px" />
+</p>
+</div>
+</div>
+
+</section>
+<section>
+<div class="column" style="float:left; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-03_21-16-37_screenshot.png" alt="2021-01-03_21-16-37_screenshot.png" height="600px" />
+</p>
+</div>
+
+</div>
+
+<div class="column" style="float:right; width: 50%">
+
+
+<div class="figure">
+<p><img src="img/2021-01-03_21-16-55_screenshot.png" alt="2021-01-03_21-16-55_screenshot.png" height="600px" />
+</p>
+</div>
+
+</div>
+
+</section>
+</section>
+<section>
+<section id="slide-org3daae78">
+<h2 id="org3daae78">5 min fordybelse</h2>
+<ul>
+<li>Nedskriv dine egne refleksioner over dagens under.</li>
+<li>Foregår i tavshed.</li>
+
+</ul>
+</section>
+</section>
+</div>
+</div>
+<script src="/home/jde/git-repos/reveal.js/dist/reveal.js"></script>
+<script src="/home/jde/git-repos/reveal.js/plugin/markdown/markdown.js"></script>
+<script src="/home/jde/git-repos/reveal.js/plugin/notes/notes.js"></script>
+<script src="/home/jde/git-repos/reveal.js/plugin/search/search.js"></script>
+<script src="/home/jde/git-repos/reveal.js/plugin/zoom/zoom.js"></script>
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+
+controls: true,
+progress: true,
+history: false,
+center: false,
+slideNumber: 'c/t',
+rollingLinks: false,
+keyboard: true,
+mouseWheel: false,
+fragmentInURL: false,
+hashOneBasedIndex: false,
+pdfSeparateFragments: true,
+
+overview: true,
+
+transition: 'slide',
+transitionSpeed: 'default',
+slideNumber:"c/t",progress:true,transition:"slide",navigationMode:"default",hash:true,history:true,
+
+// Plugins with reveal.js 4.x
+plugins: [ RevealMarkdown, RevealNotes, RevealSearch, RevealZoom ],
+
+// Optional libraries used to extend reveal.js
+dependencies: [
+]
+
+});
+</script>
+</body>
+</html>

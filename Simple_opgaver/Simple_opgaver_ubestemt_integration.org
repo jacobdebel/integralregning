@@ -1,0 +1,46 @@
+#+title: Simple opgaver
+#+subtitle: Ubestemt integration
+#+author: Matematik A
+#+date: Vibenshus Gymnasium
+#+latex_class: article
+#+latex_class_options: [a4paper, 12pt]
+#+language: da
+#+latex_header: \usepackage[danish]{babel}
+#+latex_header: \usepackage{mathtools}
+#+latex_header: \usepackage[margin=3.0cm]{geometry}
+#+latex_header: \hypersetup{colorlinks, linkcolor=black, urlcolor=blue}
+#+latex_header_extra: \setlength{\parindent}{0em}
+#+latex_header_extra: \parskip 1.5ex
+#+options: ^:{} tags:nil toc:nil num:nil timestamp:nil
+
+* Introduktion
+
+Alle opgaver skal besvares uden brug af CAS. Brug i stedet den udleverede formelsamling til at slå stamfunktioner op for udvalgte funktionstyper.
+
+Husk, at der ikke er noget som hedder kæderegel, produktregel eller kvotientregel for integration! Vi vil se på metoder senere, som i /nogle/ tilfælde kan bruges, men ikke altid.
+
+* Opgave 1                                                         :opg_10_4:
+
+Bestem følgende ubestemte integraler uden brug af CAS. Nogen gange skal integranden (funktionen, som skal integreres) omskrives, /inden/ selve integrationen finder sted.
+
+1. $\int x -1 \,dx$
+2. $\int x^2 -1 \,dx$
+3. $\int x^{-2} -1 \,dx$
+4. $\int \frac{1}{x^3} \,dx$
+5. $\int \frac{1-x}{x^3} \,dx$
+6. $\int \frac{2-x}{x-2}\,dx$
+
+   \newpage
+* Opgave 2                                                         :opg_10_6:
+Bestem, uden brug af CAS, stamfunktionerne til hver af følgende funktioner:
+
+\begin{align*}
+f(x) &= - \sin \left( x \right) \\
+g(x) &= - \cos \left( x \right) +7 \\
+h(x) &= - 2 \cdot \cos \left( x \right) \\
+d(x) &= - \cos \left( x \right) + 2 \cdot \sin \left( x \right)\\
+e(x) &= x^4 -x \\
+t(x) &= x^{\frac{2}{5}} - \sqrt{x} \\
+m(x) &= \frac{1}{x^{3.1}} \\
+n(x) &= e^x - x^e 
+\end{align*}
